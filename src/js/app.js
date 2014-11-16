@@ -1,14 +1,12 @@
-angular.module('wvwvvvjsApp', ['ngRoute'])
+angular.module('wvwvvvjsApp', ['ngRoute', 'basicBarGraphMod'])
 
 .config(['$routeProvider', '$locationProvider',
-  function($routeProvider, $locationProvider) {
+  function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'src/views/home.html'
       })
-      .when('/1', {
-        templateUrl: 'src/views/viz/1.html'
+      .when('/1-basic-bar-graph', {
+        templateUrl: 'src/views/viz/1-basic-bar-graph.html'
       });
-
-    $locationProvider.html5Mode(true);
   }]);
